@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux'
 function App() {
 
   return (
-    <>
+    <section>
         <div>
             <a href="https://vite.dev" target="_blank">
             <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -18,6 +18,7 @@ function App() {
             </a>
         </div>
         <h1>Vite + React</h1>
+        <h3>UseSelector</h3>
         <Counter counterId='first' />
         <Counter counterId='second' />
         <div className="card">
@@ -28,7 +29,7 @@ function App() {
         <p className="read-the-docs">
             Click on the Vite and React logos to learn more
         </p>
-    </>
+    </section>
   )
 };
 
@@ -55,7 +56,7 @@ export function Counter({ counterId }: { counterId: CounterId }) {
     //const counterState = selectCounter(store.getState(), counterId);
 
     const dispatch = useDispatch();
-    // useSelector 
+    // useSelector /////
     //const counterState = useAppSelector((state) => state.counters[counterId]);
     const counterState = useAppSelector((state) => selectCounter(state, counterId));
 
