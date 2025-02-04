@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { AppState, CounterId, DecrementAction, IncrementAction, useAppSelector } from './store'
 import { useDispatch } from 'react-redux'
+import UsersList from './UsersList'
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
         <p className="read-the-docs">
             Click on the Vite and React logos to learn more
         </p>
+
+        <UsersList />
     </section>
   )
 };
